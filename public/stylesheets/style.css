@@ -45,6 +45,10 @@ code {
   padding: 7px;
 }
 
+.tweet {
+  padding: 10px 0 10px 0;
+}
+
 .tweetbox img {
   float: left;
   height: 48px;

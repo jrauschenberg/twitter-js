@@ -2,8 +2,11 @@ var _ = require('lodash');
 
 var data = [];
 
+var ID = 0;
+
 function add (name, text) {
-  data.push({ name: name, text: text });
+  ID++;
+  data.push({ name: name, text: text, ID: ID });
 };
 
 function list () {
@@ -13,9 +16,6 @@ function list () {
 function find (properties) {
   return _.filter(data, properties);
 };
-
-module.exports = { add: add, list: list, find: find };
-
 
 var randArrayEl = function(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -32,8 +32,9 @@ var getFakeTweet = function() {
   return "Fullstack Academy is " + randArrayEl(awesome_adj) + "! The instructors are just so " + randArrayEl(awesome_adj) + ". #fullstacklove #codedreams";
 };
 
+module.exports = { add: add, list: list, find: find, ID: ID };
+
 for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
-
 
