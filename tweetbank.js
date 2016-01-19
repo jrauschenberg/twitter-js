@@ -32,9 +32,13 @@ var getFakeTweet = function() {
   return "Fullstack Academy is " + randArrayEl(awesome_adj) + "! The instructors are just so " + randArrayEl(awesome_adj) + ". #fullstacklove #codedreams";
 };
 
-module.exports = { add: add, list: list, find: find, ID: ID };
+module.exports = { add: add, list: list, find: find };
 
 for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
+
+module.exports.ID = ID;
+
+
 

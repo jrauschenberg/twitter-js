@@ -31,7 +31,7 @@ router.post('/tweets', function(req, res) {
   var text = req.body.text;
   tweetBank.add(name, text);
   var id = tweetBank.ID;
-  io.sockets.emit('new_tweet', { name: name, text: text, ID: id });
+  io.sockets.emit('new_tweet', { name: name, text: text, ID: id+1 });
   res.redirect('/');
 });
 
