@@ -87,7 +87,7 @@
 
       // When 'new_tweet' events are fired, do something with the packaged tweet
       socket.on('new_tweet', function (tweet) { 
-        alert(tweet.ID);
+        // alert(tweet.ID);
         // alert('Refreshing... check the console...');
         // some logic to add the new tweet to the DOM…
         $('#tweetList').append("<ul><b><a href='/users/" + tweet.name + "'>" + tweet.name + "</a></b></ul><ul><a href='/tweets/" + tweet.ID + "'>" + tweet.text + "</a></ul>");
